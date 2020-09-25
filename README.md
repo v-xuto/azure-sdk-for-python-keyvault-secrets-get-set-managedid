@@ -11,10 +11,10 @@ urlFragment: get-set-keyvault-secrets-managed-id-python
 
 # How to set and get secrets from Azure Key Vault with Azure Managed Identities and Python
 
-## SDK Versions
-In this sample, you will find the following folders:
-* **v3** - references Key Vault SDK v3
-* **v4** - references Key Vault SDK v4
+## This sample shows how to do the following operations of Key Vault secret with Key Vault SDK
+- Get Key Vault Credentials
+- Create a secret client
+- Get an existing secret
 
 ## Background
 For service to service authentication, the approach involved creating an Azure AD application and associated credential, and using that credential to get a token. While this approach works well, there are two shortcomings:
@@ -85,21 +85,12 @@ You can also create an Azure service principal either through
     git clone https://github.com/Azure-Samples/azure-sdk-for-python-keyvault-secrets-get-set-managedid.git
     ```
 
-4.  Run the following command to install dependencies for "SDK version 3" and "SDK version 4":
+4.  Run the following command to install dependencies:
 
-- SDK version 4
 
-```
-cd v4
-pip install -r requirements.txt
-```
-
-- SDK version 3
-
-```
-cd v3
-pip install -r requirements.txt
-```
+    ```
+    pip install -r requirements.txt
+    ```
 
 5.  Set up the environment variable `KEY_VAULT_URL` with your KeyVault URL or replace the variable in the example file.
 
@@ -121,6 +112,19 @@ pip install -r requirements.txt
   
    - `/ping` : This just answers "hello world" and is a good way to test if your packages are installed correctly without testing Azure itself.
    - `/` : The MSI sample itself
+
+## Use latest Key Vault SDK
+
+The Key Vault SDK package version here is **0.3.x**, if you are using the [latest](https://pypi.org/project/azure-keyvault-secrets/) version of the Key Vault secret SDK package, please refer to the following examples:
+
+ * [helloworld.py](https://github.com/Azure/azure-sdk-for-python/blob/master/sdk/keyvault/azure-keyvault-secrets/samples/hello_world.py) - Examples for common Key Vault secret tasks:
+
+   * Get DefaultAzureCredential Credentials
+   * Create a secret client
+   * Create a new Secret
+   * Get an existing secret
+   * Update an existing secret
+   * Delete a secret
 
 ## Deploying on Azure Web App
 
