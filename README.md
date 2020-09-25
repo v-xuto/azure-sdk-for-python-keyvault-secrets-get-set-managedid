@@ -12,8 +12,8 @@ urlFragment: get-set-keyvault-secrets-managed-id-python
 # How to set and get secrets from Azure Key Vault with Azure Managed Identities and Python
 
 ## This sample shows how to do the following operations of Key Vault secret with Key Vault SDK
-- Get Key Vault Credentials
-- Create a secret client
+- Get Key Vault MSIAuthentication or ServicePrincipalCredentials
+- Create a Key Vault client
 - Get an existing secret
 
 ## Background
@@ -119,9 +119,9 @@ The Key Vault SDK package version here is **0.3.x**, if you are using the [lates
 
  * [helloworld.py](https://github.com/Azure/azure-sdk-for-python/blob/master/sdk/keyvault/azure-keyvault-secrets/samples/hello_world.py) - Examples for common Key Vault secret tasks:
 
-   * Get DefaultAzureCredential Credentials
+   * Get DefaultAzureCredential
    * Create a secret client
-   * Create a new Secret
+   * Create a new secret
    * Get an existing secret
    * Update an existing secret
    * Delete a secret
