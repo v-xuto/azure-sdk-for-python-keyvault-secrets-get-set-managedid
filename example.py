@@ -30,7 +30,8 @@ def run_example():
     # Get credentials
     credentials = get_key_vault_credentials()
 
-    # Deprecated Libraries, create a KeyVault client 
+    # Deprecated Libraries
+    # Create a KeyVault client
     key_vault_client = KeyVaultClient(
         credentials
     )

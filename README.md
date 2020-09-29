@@ -50,7 +50,7 @@ To run and deploy this sample, you need the following:
 Use the "Deploy to Azure" button to deploy an ARM template to create the following resources:
 1. App Service with [Azure Managed Identities].
 2. Key Vault with a secret, and an access policy that grants the App Service access to **Get Secrets**.
->Note: Clicking the link will take you to a page with a couple of required fields that should maybe be mentioned in the sample. Users have to choose/create a resource group, select a region, specify a website name, and specify a Key Vault name. The current wording suggests that only a secret value needs to be specified.
+>Note: When preparing the deployment, there will be a few required fields to fill out (subscription, resource group, region, website name, Key Vault name, and secret value). The secret value will be the value of the secret named "secret" created in the Key Vault upon deployment.
 
 Review the resources created using the Azure portal. You should see an App Service and a Key Vault. View the access policies of the Key Vault to see that the App Service has access to it. 
 
